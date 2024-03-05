@@ -1,0 +1,34 @@
+18:24:27.131432 execve("./hello", ["./hello"], 0xfffff8b65248 /* 30 vars */) = 0
+18:24:27.133034 brk(NULL)               = 0xaaaafa934000
+18:24:27.133288 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffb435f000
+18:24:27.133593 faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+18:24:27.134334 openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+18:24:27.134741 newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=27399, ...}, AT_EMPTY_PATH) = 0
+18:24:27.135266 mmap(NULL, 27399, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffffb4358000
+18:24:27.135725 close(3)                = 0
+18:24:27.136121 openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+18:24:27.136497 read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\340u\2\0\0\0\0\0"..., 832) = 832
+18:24:27.136839 newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1637400, ...}, AT_EMPTY_PATH) = 0
+18:24:27.137165 mmap(NULL, 1805928, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffffb4171000
+18:24:27.137415 mmap(0xffffb4180000, 1740392, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffffb4180000
+18:24:27.137674 munmap(0xffffb4171000, 61440) = 0
+18:24:27.137989 munmap(0xffffb4329000, 3688) = 0
+18:24:27.138232 mprotect(0xffffb4308000, 61440, PROT_NONE) = 0
+18:24:27.138492 mmap(0xffffb4317000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x187000) = 0xffffb4317000
+18:24:27.138755 mmap(0xffffb431d000, 48744, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffffb431d000
+18:24:27.139046 close(3)                = 0
+18:24:27.139318 set_tid_address(0xffffb435ff30) = 3728
+18:24:27.139613 set_robust_list(0xffffb435ff40, 24) = 0
+18:24:27.139857 rseq(0xffffb4360600, 0x20, 0, 0xd428bc00) = 0
+18:24:27.140219 mprotect(0xffffb4317000, 16384, PROT_READ) = 0
+18:24:27.140493 mprotect(0xaaaabeb30000, 4096, PROT_READ) = 0
+18:24:27.140746 mprotect(0xffffb4364000, 8192, PROT_READ) = 0
+18:24:27.141032 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+18:24:27.141325 munmap(0xffffb4358000, 27399) = 0
+18:24:27.141594 newfstatat(1, "", {st_mode=S_IFCHR|0620, st_rdev=makedev(0x88, 0), ...}, AT_EMPTY_PATH) = 0
+18:24:27.141890 getrandom("\xdf\xb3\xbd\x68\x0f\x22\x91\xed", 8, GRND_NONBLOCK) = 8
+18:24:27.142160 brk(NULL)               = 0xaaaafa934000
+18:24:27.142401 brk(0xaaaafa955000)     = 0xaaaafa955000
+18:24:27.142692 write(1, "hello world\n", 12) = 12
+18:24:27.142959 exit_group(0)           = ?
+18:24:27.143397 +++ exited with 0 +++

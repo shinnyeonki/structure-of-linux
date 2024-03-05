@@ -1,0 +1,160 @@
+execve("/usr/bin/java", ["java", "HelloWorld"], 0xffffdb04f058 /* 30 vars */) = 0
+brk(NULL)                               = 0xaaaaeb0d5000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff98e39000
+readlinkat(AT_FDCWD, "/proc/self/exe", "/usr/lib/jvm/java-17-openjdk-arm"..., 4096) = 43
+faccessat(AT_FDCWD, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/aarch64/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/aarch64/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/aarch64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/aarch64", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/tls", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/aarch64/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/aarch64/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/aarch64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/aarch64", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/aarch64/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/aarch64/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/aarch64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/aarch64", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/tls", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/aarch64/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/aarch64/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/aarch64/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/aarch64", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/atomics/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/atomics", 0xffffc7b59f30, 0) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/libz.so.1", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}, 0) = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=30659, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 30659, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffff98e31000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=104608, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 233648, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff98dca000
+mmap(0xffff98dd0000, 168112, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff98dd0000
+munmap(0xffff98dca000, 24576)           = 0
+munmap(0xffff98dfa000, 37040)           = 0
+mprotect(0xffff98de8000, 65536, PROT_NONE) = 0
+mmap(0xffff98df8000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x18000) = 0xffff98df8000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/libjli.so", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/libjli.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=70896, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 188720, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff98da1000
+mmap(0xffff98db0000, 123184, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff98db0000
+munmap(0xffff98da1000, 61440)           = 0
+munmap(0xffff98dcf000, 304)             = 0
+mprotect(0xffff98dbe000, 61440, PROT_NONE) = 0
+mmap(0xffff98dcd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xd000) = 0xffff98dcd000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/bin/../lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\340u\2\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0755, st_size=1637400, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 1805928, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff98bf7000
+mmap(0xffff98c00000, 1740392, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff98c00000
+munmap(0xffff98bf7000, 36864)           = 0
+munmap(0xffff98da9000, 28264)           = 0
+mprotect(0xffff98d88000, 61440, PROT_NONE) = 0
+mmap(0xffff98d97000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x187000) = 0xffff98d97000
+mmap(0xffff98d9d000, 48744, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffff98d9d000
+close(3)                                = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff98e2f000
+set_tid_address(0xffff98e2f0f0)         = 6307
+set_robust_list(0xffff98e2f100, 24)     = 0
+rseq(0xffff98e2f7c0, 0x20, 0, 0xd428bc00) = 0
+mprotect(0xffff98d97000, 16384, PROT_READ) = 0
+mprotect(0xffff98df8000, 4096, PROT_READ) = 0
+mprotect(0xffff98dcd000, 4096, PROT_READ) = 0
+mprotect(0xaaaabe0f1000, 4096, PROT_READ) = 0
+mprotect(0xffff98e3e000, 8192, PROT_READ) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+munmap(0xffff98e31000, 30659)           = 0
+getrandom("\x86\x47\xcf\xe3\xa5\x2b\x41\x05", 8, GRND_NONBLOCK) = 8
+brk(NULL)                               = 0xaaaaeb0d5000
+brk(0xaaaaeb0f6000)                     = 0xaaaaeb0f6000
+readlinkat(AT_FDCWD, "/proc/self/exe", "/usr/lib/jvm/java-17-openjdk-arm"..., 4096) = 43
+faccessat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/lib/libjava.so", F_OK) = 0
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/lib/jvm.cfg", O_RDONLY) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=41, ...}, AT_EMPTY_PATH) = 0
+read(3, "-server KNOWN\n-client IGNORE\n-ze"..., 4096) = 41
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+newfstatat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/lib/server/libjvm.so", {st_mode=S_IFREG|0644, st_size=23929320, ...}, 0) = 0
+openat(AT_FDCWD, "/usr/lib/jvm/java-17-openjdk-arm64/lib/server/libjvm.so", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=23929320, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 19981400, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff978f1000
+mmap(0xffff97900000, 19915864, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff97900000
+munmap(0xffff978f1000, 61440)           = 0
+munmap(0xffff98bff000, 1112)            = 0
+mprotect(0xffff98a6e000, 65536, PROT_NONE) = 0
+mmap(0xffff98a7e000, 1060864, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x116e000) = 0xffff98a7e000
+mmap(0xffff98b81000, 513112, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffff98b81000
+close(3)                                = 0
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=30659, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 30659, PROT_READ, MAP_PRIVATE, 3, 0) = 0xffff98e31000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libstdc++.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=2190752, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 2332704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff976c6000
+mmap(0xffff976d0000, 2267168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff976d0000
+munmap(0xffff976c6000, 40960)           = 0
+munmap(0xffff978fa000, 22560)           = 0
+mprotect(0xffff978da000, 61440, PROT_NONE) = 0
+mmap(0xffff978e9000, 57344, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x209000) = 0xffff978e9000
+mmap(0xffff978f7000, 10272, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xffff978f7000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=551064, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 680048, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff97629000
+mmap(0xffff97630000, 614512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff97630000
+munmap(0xffff97629000, 28672)           = 0
+munmap(0xffff976c7000, 32880)           = 0
+mprotect(0xffff976b6000, 61440, PROT_NONE) = 0
+mmap(0xffff976c5000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x85000) = 0xffff976c5000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/aarch64-linux-gnu/libgcc_s.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\0\0\0\0\0\0\0\0"..., 832) = 832
+newfstatat(3, "", {st_mode=S_IFREG|0644, st_size=84296, ...}, AT_EMPTY_PATH) = 0
+mmap(NULL, 213704, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xffff975fb000
+mmap(0xffff97600000, 148168, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0) = 0xffff97600000
+munmap(0xffff975fb000, 20480)           = 0
+munmap(0xffff97625000, 41672)           = 0
+mprotect(0xffff97614000, 61440, PROT_NONE) = 0
+mmap(0xffff97623000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x13000) = 0xffff97623000
+close(3)                                = 0
+mprotect(0xffff97623000, 4096, PROT_READ) = 0
+mprotect(0xffff976c5000, 4096, PROT_READ) = 0
+mprotect(0xffff978e9000, 45056, PROT_READ) = 0
+mprotect(0xffff98a7e000, 860160, PROT_READ) = 0
+brk(0xaaaaeb11c000)                     = 0xaaaaeb11c000
+sysinfo({uptime=3195, loads=[8640, 4192, 3040], totalram=8314187776, freeram=5917376512, sharedram=1351680, bufferram=107532288, totalswap=4100976640, freeswap=4100976640, procs=423, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+getpid()                                = 6307
+munmap(0xffff98e31000, 30659)           = 0
+rt_sigaction(SIGRT_1, {sa_handler=0xffff98c7a700, sa_mask=[], sa_flags=SA_ONSTACK|SA_RESTART|SA_SIGINFO}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+mmap(NULL, 2088960, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_STACK, -1, 0) = 0xffff97402000
+rt_sigprocmask(SIG_BLOCK, ~[], [], 8)   = 0
+clone(child_stack=0xffff975fe960, flags=CLONE_VM|CLONE_FS|CLONE_FILES|CLONE_SIGHAND|CLONE_THREAD|CLONE_SYSVSEM|CLONE_SETTLS|CLONE_PARENT_SETTID|CLONE_CHILD_CLEARTID, parent_tid=[6308], tls=0xffff975ff8e0, child_tidptr=0xffff975ff1f0) = 6308
+rt_sigprocmask(SIG_SETMASK, [], NULL, 8) = 0
+futex(0xffff975ff1f0, FUTEX_WAIT_BITSET|FUTEX_CLOCK_REALTIME, 6308, NULL, FUTEX_BITSET_MATCH_ANY) = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
