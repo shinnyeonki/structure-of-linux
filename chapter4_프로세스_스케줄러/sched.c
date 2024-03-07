@@ -59,10 +59,16 @@ static inline void load(unsigned long nloop)
     }
 }
 
+//자식 프로세스가 실행하는 함수
 static void child_fn(int id, struct timespec *buf, int nrecord, \
                     unsigned long nloop_per_resol, struct timespec start)
 {
-    for (int i = 0; i < nrecord; ++i)
+    /**
+     * nrecord(진행도 기록 횟수) 만큼 반복하면서 각각의 시간을 기록
+     * load 함수를 호출하여 부하를 준다
+     * 각각의 시간을 시간을 기록할 수 있는 timespec 구조체 배열 buf에 저장
+    */
+    for (int i = 0; i < nrecord; ++i) 
     {
         struct timespec ts;
 
@@ -71,7 +77,7 @@ static void child_fn(int id, struct timespec *buf, int nrecord, \
         buf[i] = ts;
     }
     for (int i = 0; i < nrecord; ++i)
-        // 프로세스고유ID(0 ~ nproc-1), 프로그램시작시점부터경과한시간, 진행도[%]
+        // 프로세스고유ID(0 ~ nproc-1), 프로그램시작시점부터경과한시간(ms), 진행도[%]
         printf("%d\t%lu\t%d\n", id, diff_nsec(start, buf[i]) / NSECS_PER_MSEC, \
             100 * (i + 1) / nrecord);
 
@@ -93,6 +99,7 @@ int main(int argc, char *argv[])
         err(EXIT_FAILURE, "parameters must be positive value");
     else if (total % resol)
         err(EXIT_FAILURE, "<total> must be multiple of <resolution>");
+    // 인수 적절성 평가
 
     /**
      * 총 실행 시간 / 진행도 기록 간격 ==> 총 기록 횟수
@@ -102,7 +109,7 @@ int main(int argc, char *argv[])
      * 예외처리
      */
     int nrecord = total / resol;  
-    struct timespec *logbuf = malloc(nrecord * sizeof(struct timespec)); // timespec 구조체 => 시간을 나타내는 구조체
+    struct timespec *logbuf = malloc(nrecord * sizeof(struct timespec)); // timespec 구조체 => 시간을 나타내는 구조체 ==> 시간을 기록할 수 있는 배열
     if (!logbuf)
         err(EXIT_FAILURE, "malloc(logbuf) failed");
 
@@ -112,26 +119,30 @@ int main(int argc, char *argv[])
     // printf("nloop_per_msec : %lu\n", nloop_per_msec);
     // printf("nloop_per_resol : %lu\n", nloop_per_resol);
 
+    /**
+     * nproc 만큼의 프로세스를 생성
+     * pid_t 는 프로세스 ID를 나타내는 데이터 타입
+    */
     pid_t *pids = malloc(nproc * sizeof(pid_t));
     if (!pids)
         err(EXIT_FAILURE, "malloc(pids) failed");
 
     struct timespec start;
-    clock_gettime(CLOCK_MONOTONIC, &start);
+    clock_gettime(CLOCK_MONOTONIC, &start); //  단조 시계로 특정시간부터 흐른 시간을 측정합니다. (일반적으로 부팅이후 시간) => 시작 시간 기록
 
     int ret = EXIT_SUCCESS;
     int ncreated = 0;
     for (int i = 0; i < nproc; ++i, ++ncreated)
     {
-        pids[i] = fork();
-        if (pids[i] < 0)
+        pids[i] = fork(); // 프로세스 분기 성공시 부모 프로세스에는 자식 프로세스의 PID가, 자식 프로세스에는 0이 리턴됨, 프로세스 분기 실패시 -1 리턴
+        if (pids[i] < 0) // fork 실패 시
         {
-            for (int j = 0; j < ncreated; ++j)
-                kill(pids[j], SIGKILL);
-            ret = EXIT_FAILURE;
+            for (int j = 0; j < ncreated; ++j) // fork 가 실패하였으므로 이미 생성된 프로세스들은 강제로 종료시킨다
+                kill(pids[j], SIGKILL); // 
+            ret = EXIT_FAILURE; // 마지막 리턴값을 EXIT_FAILURE로 설정
             break ;
         }
-        else if (pids[i] == 0)
+        else if (pids[i] == 0) // 자식 프로세스일 경우
             child_fn(i, logbuf, nrecord, nloop_per_resol, start);
     }
     
